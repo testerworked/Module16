@@ -23,6 +23,8 @@ TrafficLight : AndroidNavigation
 
 <br>
 
+TheNoteBook : BottomNavigationView
+
 <br>
 <br>
 <br>

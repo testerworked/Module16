@@ -1,0 +1,61 @@
+package com.homework.thenotebook
+
+/**
+ *Приложение «Записная книжка»
+ *
+ *          Необходимо написать приложение с использованием BottomNavigationView, представляющее записную книжку. Приложение запускается со стартового экрана, название приложение и imageView происходит с анимацией.
+ *
+ *          На первом экране (фрагменте) располагается личная информация (это могут быть произвольные данные). Чтобы ввести данные в поля, нужно нажать на соответствующее поле и в диалоговом окне ввести данные, по нажатию на кнопку сохранения в диалоговом окне, данные появляются в поле вывода.
+ *
+ *          На втором экране располагается список необходимых заметок или задач на сегодня, их на этом экране можно добавлять в список, удалять из списка и редактировать, ставить отметку о выполнении задачи (например, через checkbox). Добавление заметки (задачи) выполняется через кнопку добавления, удаление и редактирование через нажатие на элемент списка.
+ *
+ *          На третьем экране (фрагменте) выполняется запрос погоды на текущее время по текущим координатам.
+ *
+ *          Весь функционал, описанный выше был рассмотрен в предыдущих уроках.
+ *
+ * Для работы приложения необходимо создать:
+ *
+ * На стартовом экране:
+ *
+ * 1.     ImageView.
+ *
+ * 2.     Поле вывода названия приложения.
+ *
+ * На первом экране:
+ *
+ * 1.     Поля вывода личных данных.
+ *
+ * На втором экране:
+ *
+ * 1.     Поле ввода заметки (задачи).
+ *
+ * 2.     Кнопка «Добавить».
+ *
+ * 3.     Список заметок (задач) на основе RecyclerView.
+ *
+ * На третьем экране:
+ *
+ * 1.     Поля вывода данных для отображения текущего состояния погоды.
+ *
+ * 2.     Кнопка «Обновить данные».
+ *
+ *
+ */
+import android.os.Bundle
+import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContentView(R.layout.activity_main)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
+    }
+}
