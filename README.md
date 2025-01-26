@@ -26,6 +26,9 @@ TrafficLight : AndroidNavigation
 TheNoteBook : BottomNavigationView
 
 <br>
+
+ElectronicMail : FirebaseAuthentication
+
 <br>
 <br>
 <br>
