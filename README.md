@@ -10,3 +10,5 @@ VideoPlayer : VideoView
 FreeAccess : Permissions
 
 <br>
+
+MyContacts : ContentProviders
