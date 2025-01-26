@@ -12,3 +12,10 @@ FreeAccess : Permissions
 <br>
 
 MyContacts : ContentProviders
+
+<br>
+
+MyContactsUp : ContentProviderWriteContact
+
+<br>
+
